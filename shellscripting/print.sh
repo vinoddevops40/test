@@ -39,3 +39,4 @@ Echo $0
 echo $1
 echo ALL = $*
 echo ALL = $@
+echo number of value = $#
