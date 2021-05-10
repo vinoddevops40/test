@@ -13,11 +13,11 @@ echo "---------------------------------------------------------------"
 yum install nginx -y
 if [ $? -ne 0 ]; then
   echo "---------------------------------------------------------------"
-  echo -e "\e[1;31m [ERROR] Nginx installation is failure \e[0m"
+  echo "\e[1;31m [ERROR] Nginx installation is failure \e[0m"
   exit 2
 else
   echo "---------------------------------------------------------------"
-  echo -e "\e[1;32m [ERROR] Nginx installation is successful \e[0m"
+  echo "\e[1;32m [ERROR] Nginx installation is successful \e[0m"
 fi
 echo "---------------------------------------------------------------"
 systemctl enable nginx
@@ -28,11 +28,11 @@ echo "---------------------------------------------------------------"
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip"
 if [ $? -ne 0 ]; then
   echo "---------------------------------------------------------------"
-  echo -e "\e[1;31m [ERROR] Download Frontend components is failure \e[0m"
+  echo "\e[1;31m [ERROR] Download Frontend components is failure \e[0m"
   exit 2
 else
   echo "---------------------------------------------------------------"
-  echo -e "\e[1;32m [ERROR] Download Frontend components is successful \e[0m"
+  echo "\e[1;32m [ERROR] Download Frontend components is successful \e[0m"
 fi
 echo "---------------------------------------------------------------"
 cd /usr/share/nginx/html
