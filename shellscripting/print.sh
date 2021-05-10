@@ -25,7 +25,7 @@ a=100
 FRUIT=APPLE
 echo "$FRUIT is ${a}no"
 
-DATE=$(date %A)
+DATE=$(date +%A)
 echo todays date is ${DATE}
 
 
