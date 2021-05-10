@@ -21,4 +21,8 @@ echo  "${COURSE} Training"
 echo  "Traing for ${COURSE} lasts 72 days"
 echo  "Course name is $COURSE"
 
+a=100
+FRUIT=APPLE
+echo "$FRUIT is ${a}no"
+
 
