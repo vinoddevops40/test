@@ -11,6 +11,15 @@ echo -e "\e[32mHello World in Green"
 echo -e "\e[1;33mHello World in yellow\e[0"
 
 
-echo -e *********************************************
+echo -e "***************************************"
+echo  DevOps Training
+echo  Traing for DeOps lasts 72 days
+echo  Course name is DevOps
+
+Course = DevOps
+
+echo  ${Course} Training
+echo  Traing for ${Course} lasts 72 days
+echo  Course name is $Course
 
 
