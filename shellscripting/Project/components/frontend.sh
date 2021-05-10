@@ -8,7 +8,7 @@ echo Install Frontend Component
 #  exit
 #fi
 
-yum install nginx
+yum install nginx -y
 
 systemctl enable nginx
 systemctl start nginx
