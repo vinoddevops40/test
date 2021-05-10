@@ -35,3 +35,7 @@ read -p 'enter your name: ' name
 read -p 'enter your course name: ' course
 echo -e "\n name of the course $course name of the Student $name"
 
+Echo $0
+echo $1
+echo ALL = $*
+echo ALL = $@
