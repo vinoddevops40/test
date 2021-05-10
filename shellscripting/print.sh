@@ -31,3 +31,7 @@ echo todays date is ${DATE}
 echo "then name of course $COURSENAME"
 echo -e "*******INPUT******"
 
+read -p 'enter your name: ' name
+read -p 'enter your course name: ' course
+echo -e "name of the course $COURSE name of the Student $NAME"
+
