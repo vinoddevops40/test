@@ -1,2 +1,3 @@
-/bin/bash
+#!/bin/bash
+
 echo "installing cart through shell script"
