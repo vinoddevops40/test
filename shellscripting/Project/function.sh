@@ -12,3 +12,9 @@ function xyz(){
 
 abc
 xyz
+
+function iarg(){
+  echo input arg is $1
+}
+
+iarg pass
