@@ -7,19 +7,11 @@ echo Install Frontend Component
 #  echo -e "\e[1;31mYou should be a root user to execute the command\e[0m"
 #  exit
 #fi
-echo "---------------------------------------------------------------"
-echo -e "\e[1;35m [INFO] Installing NGINX\e[0m"
-echo "---------------------------------------------------------------"
+
+print "NGINX Install"
 yum install nginx -y
-if [ $? -ne 0 ]; then
-  echo "---------------------------------------------------------------"
-  echo -e "\e[1;31m [ERROR] Nginx installation is failure \e[0m"
-  exit 2
-else
-  echo "---------------------------------------------------------------"
-  echo -e "\e[1;32m [ERROR] Nginx installation is successful \e[0m"
-fi
-echo "---------------------------------------------------------------"
+stat $? "NGINX Install"
+
 systemctl enable nginx
 systemctl start nginx
 echo "---------------------------------------------------------------"
