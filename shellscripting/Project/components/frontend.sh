@@ -8,9 +8,9 @@ echo Install Frontend Component
 #  exit
 #fi
 
-print "NGINX Install"
+PRINT "NGINX Install"
 yum install nginx -y
-stat $? "NGINX Install"
+STAT $? "NGINX Install"
 
 systemctl enable nginx
 systemctl start nginx
