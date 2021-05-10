@@ -33,5 +33,5 @@ echo -e "*******INPUT******"
 
 read -p 'enter your name: ' name
 read -p 'enter your course name: ' course
-echo -e "name of the course $COURSE name of the Student $NAME"
+echo -e "\n name of the course $course name of the Student $name"
 
