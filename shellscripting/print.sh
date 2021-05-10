@@ -27,5 +27,5 @@ echo "$FRUIT is ${a}no"
 
 DATE=$(date +%A)
 echo todays date is ${DATE}
-
+echo "then name of course $COURSENAME"
 
