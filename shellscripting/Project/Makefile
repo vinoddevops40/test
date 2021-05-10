@@ -3,7 +3,7 @@ help:		##Show this help
 
 frontend:	##Install frontend component for Roboshop Project
 	@echo installing frontend component
-	@sh component/frontend.sh
+	@sh components/frontend.sh
 catalogue:	##Install catalogue component for Roboshop Project
 	@echo installing catalogue
 	@sh components/catalogue.sh
