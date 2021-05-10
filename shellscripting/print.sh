@@ -7,5 +7,6 @@ echo -e "Hello World\nHow are you"
 echo -e "Hello World\n\nHow are you"
 echo -e "\e[31mHello World in Red"
 echo -e "Hello World"
+echo -e"\e[32mHello World in Green"
 
 
