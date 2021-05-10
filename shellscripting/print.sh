@@ -16,10 +16,9 @@ echo  DevOps Training
 echo  Traing for DeOps lasts 72 days
 echo  Course name is DevOps
 
-Course = DevOps
-
-echo  ${Course} Training
-echo  Traing for ${Course} lasts 72 days
-echo  Course name is $Course
+COURSE = DEVOPS
+echo  "${COURSE} Training"
+echo  "Traing for ${Course} lasts 72 days"
+echo  "Course name is $Course"
 
 
