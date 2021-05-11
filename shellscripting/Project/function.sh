@@ -33,10 +33,10 @@ B(){
 B
 echo value of b is $b
 
-local(){
+c(){
   local c=10
   echo local variable valuec is $c
 }
 c=20
 echo value of variable in main program is $c
-local
+c
