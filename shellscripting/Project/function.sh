@@ -29,5 +29,6 @@ A
 B(){
   b =10
 }
+
 B
 echo value of b is $b
