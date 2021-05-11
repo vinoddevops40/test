@@ -1,4 +1,6 @@
 #!/bin/bash
+
+source component/common.sh
 #installing Front end component for Roboshop Project
 echo Install Frontend Component
 
