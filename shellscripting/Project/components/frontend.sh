@@ -16,6 +16,7 @@ STAT $? "NGINX Install"
 
 systemctl enable nginx
 systemctl start nginx
+
 echo "---------------------------------------------------------------"
 echo -e "\e[1;35m [INFO] Download Frontend components \e[0m"
 echo "---------------------------------------------------------------"
