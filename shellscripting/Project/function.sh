@@ -43,7 +43,7 @@ c
 
 F(){
   echo hai
-  retun
+  retun 10
   echo bye
 }
 
