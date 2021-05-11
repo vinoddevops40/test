@@ -40,3 +40,12 @@ c(){
 c=20
 echo value of variable in main program is $c
 c
+
+F(){
+  echo hai
+  retun
+  echo bye
+}
+
+F
+echo exit status of function =$?
