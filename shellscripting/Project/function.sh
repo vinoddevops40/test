@@ -18,3 +18,16 @@ function iarg(){
 }
 
 iarg pass
+
+A(){
+  echo value a = $a
+}
+
+a=10
+A()
+
+B(){
+  b =10
+}
+B()
+echo value of b is $b
