@@ -24,10 +24,10 @@ A(){
 }
 
 a=10
-A()
+A
 
 B(){
   b =10
 }
-B()
+B
 echo value of b is $b
