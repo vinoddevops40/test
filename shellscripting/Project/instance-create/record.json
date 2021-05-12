@@ -3,7 +3,7 @@
   "Changes": [{
     "Action": "CREATE",
     "ResourceRecordSet": {
-      "Name": "COMPONENT.example.com",
+      "Name": "COMPONENT.vinodmcs21.com",
       "Type": "A",
       "TTL": 300,
       "ResourceRecords": [{ "Value": "IPADDRESS"}]
