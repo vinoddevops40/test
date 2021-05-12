@@ -1,31 +1,18 @@
 #!/bin/bash
 echo "installing catalogue through shell script"
-
 source components/common.sh
 echo Install catalogue Component
+COMPONENT=catalogue
 
-PRINT "Nodejs Install"
-yum install nodejs make gcc-c++ -y
-STAT $? "Nodejs Install"
+NodeJS_Install
 
-PRINT "Add Application user for Roboshop"
-useradd roboshop
-STAT $? "Add Application user for Roboshop"
+Roboshop_App_User_Add
 
-PRINT "Download Catalogue component"
-curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/catalogue/archive/main.zip"
-STAT $? "Download Catalogue component"
+Download_Component_From_GITHUB
 
-PRINT "Extract Catalogue component"
-cd /home/roboshop
-unzip /tmp/catalogue.zip
-mv catalogue-main catalogue
-STAT $? "Extract Catalogue component"
+Extract_Component
 
-PRINT "NPM Install"
-cd /home/roboshop/catalogue
-npm install
-STAT $? "NPM Install"
+Install_Nodejs_Dependencies
 
 #mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 #systemctl daemon-reload

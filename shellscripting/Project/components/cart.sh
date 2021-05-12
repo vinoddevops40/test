@@ -5,9 +5,7 @@ echo "installing cart through shell script"
 source components/common.sh
 echo Install cart Component
 
-PRINT "Nodejs Install"
-yum install nodejs make gcc-c++ -y
-STAT $? "Nodejs Install"
+NodeJS_Install
 
 PRINT "Add Application user for Roboshop"
 useradd roboshop

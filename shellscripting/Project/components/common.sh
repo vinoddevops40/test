@@ -24,3 +24,43 @@ else
   echo -e "\e[1;32m [ERROR] $2 is successful \e[0m"
 fi
 }
+
+NodeJS_Install() {
+PRINT "Nodejs Install"
+yum install nodejs make gcc-c++ -y
+STAT $? "Nodejs Install"
+}
+
+Roboshop_App_User_Add() {
+  id roboshop
+  if [ $? -eq 0 ]; then
+    PRINT "Roboshop user already exist"
+    return
+  fi
+  PRINT "Add Application user for Roboshop"
+  useradd roboshop
+  STAT $? "Add Application user for Roboshop"
+}
+
+Download_Component_From_GITHUB() {
+  PRINT "Download ${COMPONENT} component"
+  curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/roboshop-devops-project/${COMPONENT}/archive/main.zip"
+  STAT $? "Download ${COMPONENT} component"
+}
+
+Extract_Component() {
+  PRINT "Extract ${COMPONENT} component"
+  cd /home/roboshop
+  rm -rf ${COMPONENT} && unzip /tmp/${COMPONENT}.zip && mv catalogue-main ${COMPONENT}
+  STAT $? "Extract ${COMPONENT} component"
+}
+
+Install_Nodejs_Dependencies() {
+  PRINT "NPM Install"
+  cd /home/roboshop/${COMPONENT}
+  npm install --unsafe-perm
+  STAT $? "NPM Install"
+}
+
+
+
