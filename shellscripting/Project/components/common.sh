@@ -63,4 +63,17 @@ Install_Nodejs_Dependencies() {
 }
 
 
+NodeJS_Setup() {
+  NodeJS_Install
+
+Roboshop_App_User_Add
+
+Download_Component_From_GITHUB
+
+Extract_Component
+
+Install_Nodejs_Dependencies
+}
+
+
 

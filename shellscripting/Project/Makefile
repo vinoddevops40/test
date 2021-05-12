@@ -14,3 +14,6 @@ catalogue:	common ##Install catalogue component for Roboshop Project
 cart:		common ##Install cart component for Roboshop Project
 	@echo installing cart
 	@sh components/cart.sh
+user:		common ##Install user component for Roboshop Project
+	@echo installing user
+	@sh components/user.sh

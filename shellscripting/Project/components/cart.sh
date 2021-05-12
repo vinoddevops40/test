@@ -6,15 +6,7 @@ source components/common.sh
 echo Install cart Component
 COMPONENT=catalogue
 
-NodeJS_Install
-
-Roboshop_App_User_Add
-
-Download_Component_From_GITHUB
-
-Extract_Component
-
-Install_Nodejs_Dependencies
+NodeJS_Setup
 
 #mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 #systemctl daemon-reload
