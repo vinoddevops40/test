@@ -4,27 +4,17 @@ echo "installing cart through shell script"
 
 source components/common.sh
 echo Install cart Component
+COMPONENT=catalogue
 
 NodeJS_Install
 
-PRINT "Add Application user for Roboshop"
-useradd roboshop
-STAT $? "Add Application user for Roboshop"
+Roboshop_App_User_Add
 
-PRINT "Download cart component"
-curl -s -L -o /tmp/cart.zip "https://github.com/roboshop-devops-project/cart/archive/main.zip"
-STAT $? "Download cart component"
+Download_Component_From_GITHUB
 
-PRINT "Extract cart component"
-cd /home/roboshop
-unzip /tmp/cart.zip
-mv cart-main cart
-STAT $? "Extract cart component"
+Extract_Component
 
-PRINT "NPM Install"
-cd /home/roboshop/cart
-npm install
-STAT $? "NPM Install"
+Install_Nodejs_Dependencies
 
 #mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
 #systemctl daemon-reload
