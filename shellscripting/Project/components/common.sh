@@ -51,7 +51,7 @@ Download_Component_From_GITHUB() {
 Extract_Component() {
   PRINT "Extract ${COMPONENT} component"
   cd /home/roboshop
-  rm -rf ${COMPONENT} && unzip /tmp/${COMPONENT}.zip && mv catalogue-main ${COMPONENT}
+  rm -rf ${COMPONENT} && unzip /tmp/${COMPONENT}.zip && mv ${COMPONENT}-main ${COMPONENT}
   STAT $? "Extract ${COMPONENT} component"
 }
 
@@ -64,7 +64,7 @@ Install_Nodejs_Dependencies() {
 
 
 NodeJS_Setup() {
-  NodeJS_Install
+NodeJS_Install
 
 Roboshop_App_User_Add
 
