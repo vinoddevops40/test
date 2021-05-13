@@ -3,6 +3,9 @@
 source components/common.sh
 echo Install mongodb Component
 
+COMPONENT=mongodb
+OS_Prereqs
+
 PRINT "Setup mongodb repositories"
 echo '[mongodb-org-4.2]
 name=MongoDB Repository

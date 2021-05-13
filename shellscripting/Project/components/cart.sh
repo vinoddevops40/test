@@ -5,7 +5,7 @@ echo "installing cart through shell script"
 source components/common.sh
 echo Install cart Component
 COMPONENT=catalogue
-
+OS_Prereqs
 NodeJS_Setup
 
 #mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
