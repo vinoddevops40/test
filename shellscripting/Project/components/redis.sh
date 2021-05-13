@@ -13,6 +13,17 @@ STAT $? "Setupredis repos "
 PRINT "Install redis"
 yum install redis -y
 STAT $? "install redis"
+
+
+PRINT "Update redis configuration file"
+sed -i -e '/^bind/ c 0.0.0.0' /etc/redis.conf
+STAT $? "Update redis configuration file"
+
+
+PRINT "Start redis service"
+systemctl enable redis
+systemctl restart redis
+STAT $? "Start redis service"
 #
 #STAT $? "Download Frontend "
 #
@@ -21,5 +32,3 @@ STAT $? "install redis"
 
 # yum-config-manager --enable remi
 
-# systemctl enable redis
-# systemctl start redis
