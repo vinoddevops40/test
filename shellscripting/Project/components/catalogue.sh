@@ -6,7 +6,4 @@ COMPONENT=catalogue
 OS_Prereqs
 NodeJS_Setup
 
-#mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
-#systemctl daemon-reload
-#systemctl start catalogue
-#systemctl enable catalogue
+Service_setup

@@ -68,6 +68,11 @@ Install_Nodejs_Dependencies() {
   STAT $? "NPM Install"
 }
 
+Service_setup() {
+  mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
+  sed -e 's/MONGO_DNSNAME/mongodb.vinodmcs21.com/' /etc/systemd/system/catalogue.service
+  systemctl daemon-reload && systemctl start catalogue && systemctl enable catalogue
+}
 
 NodeJS_Setup() {
 NodeJS_Install
