@@ -17,3 +17,6 @@ cart:		common ##Install cart component for Roboshop Project
 user:		common ##Install user component for Roboshop Project
 	@echo installing user
 	@sh components/user.sh
+redis:		common ##Install redis component for Roboshop Project
+	@echo installing redis
+	@sh components/redis.sh
