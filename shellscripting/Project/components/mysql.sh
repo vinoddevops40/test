@@ -6,10 +6,6 @@ echo Install mysql Component
 COMPONENT=mysql
 OS_Prereqs
 
-PRINT "NGINX Install"
-yum install nginx -y
-STAT $? "NGINX Install"
-
 PRINT "Set mysql repo"
 echo '[mysql57-community]
 name=MySQL 5.7 Community Server
