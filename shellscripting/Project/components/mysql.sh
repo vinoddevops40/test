@@ -25,19 +25,11 @@ PRINT "start mysql service"
  systemctl start mysqld
 STAT $? "start mysql service"
 
-#Now a default root password will be generated and given in the log file.
-## grep temp /var/log/mysqld.log
-#
-#Next, We need to change the default root password in order to start using the database service.
-## mysql_secure_installation
-#
-#You can check the new password working or not using the following command.
-#
-## mysql -u root -p
-#
-#Run the following SQL commands to remove the password policy.
 #> uninstall plugin validate_password;
 #> ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+
+
+#Run the following SQL commands to remove the password policy.
 #Setup Needed for Application.
 #As per the architecture diagram, MySQL is needed by
 #
