@@ -4,7 +4,7 @@ echo "${DEFAULT_PASSWORD}"
 echo "uninstall plugin validate_password;
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
 " >/tmp/sql
-mysql -u root -p"${DEFAULT_PASSWORD}" </tmp/sql
+mysql --connect-expired-password -u root -p"${DEFAULT_PASSWORD}" </tmp/sql
 
 
 
