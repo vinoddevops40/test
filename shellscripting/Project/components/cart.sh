@@ -4,7 +4,7 @@ echo "installing cart through shell script"
 
 source components/common.sh
 echo Install cart Component
-COMPONENT=catalogue
+COMPONENT=cart
 OS_Prereqs
 NodeJS_Setup
 
