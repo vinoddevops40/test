@@ -5,3 +5,5 @@ echo Install user Component
 COMPONENT=user
 OS_Prereqs
 NodeJS_Setup
+
+Service_setup
