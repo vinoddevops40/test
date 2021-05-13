@@ -7,7 +7,10 @@ OS_Prereqs
 
 
 PRINT "Setup redis repos"
+
+if [ ! -f /etc/yum.repos.d/remi.repo ]; then
 yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
+fi
 STAT $? "Setupredis repos "
 
 PRINT "Install redis"
@@ -24,11 +27,5 @@ PRINT "Start redis service"
 systemctl enable redis
 systemctl restart redis
 STAT $? "Start redis service"
-#
-#STAT $? "Download Frontend "
-#
-#Update the BindIP from 127.0.0.1 to 0.0.0.0 in config file /etc/redis.conf & /etc/redis/redis.conf
-#
 
-# yum-config-manager --enable remi
 
