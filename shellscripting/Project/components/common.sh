@@ -69,10 +69,10 @@ Install_Nodejs_Dependencies() {
 }
 
 Service_setup() {
-  cd /home/roboshop/catalogue
-  mv /home/roboshop/catalogue/systemd.service /etc/systemd/system/catalogue.service
-  sed -i -e 's/MONGO_DNSNAME/mongodb.vinodmcs21.com/' /etc/systemd/system/catalogue.service
-  systemctl daemon-reload && systemctl start catalogue && systemctl enable catalogue
+  cd /home/roboshop/${COMPONENT}
+  mv /home/roboshop/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
+  sed -i -e 's/MONGO_DNSNAME/mongodb.vinodmcs21.com/' /etc/systemd/system/${COMPONENT}.service
+  systemctl daemon-${COMPONENT} && systemctl start ${COMPONENT} && systemctl enable ${COMPONENT}
 }
 
 NodeJS_Setup() {
