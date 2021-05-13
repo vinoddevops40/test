@@ -19,7 +19,7 @@ STAT $? "install redis"
 
 
 PRINT "Update redis configuration file"
-sed -i -e '/^bind/ c 0.0.0.0' /etc/redis.conf
+sed -i -e '/^bind/ c bind 0.0.0.0' /etc/redis.conf
 STAT $? "Update redis configuration file"
 
 
