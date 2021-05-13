@@ -73,7 +73,7 @@ Service_setup() {
   cd /home/roboshop/${COMPONENT}
   mv /home/roboshop/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
   sed -i -e 's/MONGO_DNSNAME/mongodb.vinodmcs21.com/' -e 's/MONGO_ENDPOINT/mongodb.vinodmcs21.com/' -e 's/REDIS_ENDPOINT/redis.vinodmcs21.com/' -e 's/CATALOGUE_ENDPOINT/catalogue.vinodmcs21.com/' /etc/systemd/system/${COMPONENT}.service
-  systemctl daemon-reload && systemctl start ${COMPONENT} && systemctl enable ${COMPONENT}
+  systemctl daemon-reload && systemctl restart ${COMPONENT} && systemctl enable ${COMPONENT}
     STAT $? "Start the Service"
 }
 
