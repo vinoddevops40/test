@@ -72,7 +72,7 @@ Service_setup() {
   cd /home/roboshop/${COMPONENT}
   mv /home/roboshop/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
   sed -i -e 's/MONGO_DNSNAME/mongodb.vinodmcs21.com/' /etc/systemd/system/${COMPONENT}.service
-  systemctl daemon-${COMPONENT} && systemctl start ${COMPONENT} && systemctl enable ${COMPONENT}
+  systemctl daemon-reload && systemctl start ${COMPONENT} && systemctl enable ${COMPONENT}
 }
 
 NodeJS_Setup() {
