@@ -27,7 +27,7 @@ if [ $1 -ne 0 ]; then
   exit 2
 else
   echo "---------------------------------------------------------------"
-  echo -e "\e[1;32m [ERROR] $2 is successful \e[0m"
+  echo -e "\e[1;32m [SUCC] $2 is successful \e[0m"
 fi
 }
 
