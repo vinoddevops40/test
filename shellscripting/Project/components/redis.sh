@@ -6,15 +6,20 @@ COMPONENT=redis
 OS_Prereqs
 
 
+PRINT "Setup redis repos"
+yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
+STAT $? "Setupredis repos "
 
-# yum install epel-release yum-utils -y
-# yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm -y
+PRINT "Install redis"
+yum install redis -y
+STAT $? "install redis"
+#
+#STAT $? "Download Frontend "
+#
+#Update the BindIP from 127.0.0.1 to 0.0.0.0 in config file /etc/redis.conf & /etc/redis/redis.conf
+#
+
 # yum-config-manager --enable remi
-# yum install redis -y
-
-
-Update the BindIP from 127.0.0.1 to 0.0.0.0 in config file /etc/redis.conf & /etc/redis/redis.conf
-
 
 # systemctl enable redis
 # systemctl start redis
