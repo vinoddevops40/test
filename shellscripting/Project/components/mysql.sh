@@ -38,22 +38,9 @@ else
   STAT $? "My SQL PW reset is not required"
 fi
 
-#> uninstall plugin validate_password;
-#> ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
+Download_Component_From_GITHUB
 
-
-#Run the following SQL commands to remove the password policy.
-#Setup Needed for Application.
-#As per the architecture diagram, MySQL is needed by
-#
-#Shipping Service
-#So we need to load that schema into the database, So those applications will detect them and run accordingly.
-#
-#To download schema, Use the following command
-#
-## curl -s -L -o /tmp/mysql.zip "https://github.com/roboshop-devops-project/mysql/archive/main.zip"
-#Load the schema for Services.
-#
+Extract_component_to_tmp
 ## cd /tmp
 ## unzip mysql.zip
 ## cd mysql-main

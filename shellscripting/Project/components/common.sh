@@ -77,6 +77,17 @@ Service_setup() {
     STAT $? "Start the Service"
 }
 
+Extract_component_to_tmp() {
+ cd /tmp
+ unzip mysql.zip
+ rm -rf ${COMPONENT} && unzip ${COMPONENT}.zip
+
+}
+
+Load_schema_to_mysql() {
+  mysql -u root -pRoboShop@123 <shipping.sql
+}
+
 NodeJS_Setup() {
 NodeJS_Install
 
