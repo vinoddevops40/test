@@ -38,6 +38,10 @@ uninstall plugin validate_password;" >/tmp/sql
 #  STAT $? "My SQL PW reset is not required"
 fi
 
+PRINT "Download Application repository"
+curl -s -L -o /tmp/mysql.zip "https://github.com/roboshop-devops-project/mysql/archive/main.zip"
+STAT $? "Download Application repository"
+
 PRINT "Extract component to tmp"
  cd /tmp
  unzip mysql.zip
