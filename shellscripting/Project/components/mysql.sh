@@ -26,17 +26,17 @@ PRINT "start mysql service"
 STAT $? "start mysql service"
 
 PRINT "Change the default Password"
-echo show databases | mysql -uroot -pRoboshop@123
-if [ $? -ne 0 ]; then
+#echo show databases | mysql -uroot -pRoboshop@123
+#if [ $? -ne 0 ]; then
   DEFAULT_PASSWORD=$(grep 'temporary password' /var/log/mysqld.log | awk '{print $NF}')
   echo "${DEFAULT_PASSWORD}"
-  echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop123';
-uninstall plugin validate_password;" >/tmp/sql
+  echo "uninstall plugin validate_password;
+  ALTER USER 'root'@'localhost' IDENTIFIED BY 'Password';" >/tmp/sql
   mysql --connect-expired-password -u root -p"${DEFAULT_PASSWORD}" </tmp/sql
   STAT $? "Changing mysql default PQ"
 #else
 #  STAT $? "My SQL PW reset is not required"
-fi
+#fi
 
 PRINT "Download Application repository"
 curl -s -L -o /tmp/mysql.zip "https://github.com/roboshop-devops-project/mysql/archive/main.zip"
@@ -49,7 +49,7 @@ PRINT "Extract component to tmp"
 STAT $? "Extract component to tmp"
 
 PRINT "Load the shipping componet to mysql"
-  mysql -u root -pRoboShop@123 <shipping.sql
+  mysql -u root -pPassword <shipping.sql
 STAT $? "Load the shipping componet to mysql"
 #Download_Component_From_GITHUB
 #
