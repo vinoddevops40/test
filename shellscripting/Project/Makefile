@@ -23,3 +23,6 @@ redis:		common ##Install redis component for Roboshop Project
 mysql:		common ##Install mysql component for Roboshop Project
 	@echo installing mysql
 	@sh components/mysql.sh
+mysql:		common ##Install shipping component for Roboshop Project
+	@echo installing shipping
+	@sh components/shipping.sh
