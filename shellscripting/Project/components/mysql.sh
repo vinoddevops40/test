@@ -38,10 +38,19 @@ else
   STAT $? "My SQL PW reset is not required"
 fi
 
-Download_Component_From_GITHUB
+PRINT "Extract component to tmp"
+ cd /tmp
+ unzip mysql.zip
+ rm -rf ${COMPONENT} && unzip ${COMPONENT}.zip
+STAT $? "Extract component to tmp"
 
-Extract_component_to_tmp
-Load_schema_to_mysq
+PRINT "Load the shipping componet to mysql"
+  mysql -u root -pRoboShop@123 <shipping.sql
+STAT $? "Load the shipping componet to mysql"
+#Download_Component_From_GITHUB
+#
+#Extract_component_to_tmp
+#Load_schema_to_mysq
 ## cd /tmp
 ## unzip mysql.zip
 ## cd mysql-main
