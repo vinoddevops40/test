@@ -41,6 +41,7 @@ fi
 Download_Component_From_GITHUB
 
 Extract_component_to_tmp
+Load_schema_to_mysq
 ## cd /tmp
 ## unzip mysql.zip
 ## cd mysql-main
