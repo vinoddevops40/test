@@ -34,8 +34,8 @@ if [ $? -ne 0 ]; then
 uninstall plugin validate_password;" >/tmp/sql
   mysql --connect-expired-password -u root -p"${DEFAULT_PASSWORD}" </tmp/sql
   STAT $? "Changing mysql default PQ"
-else
-  STAT $? "My SQL PW reset is not required"
+#else
+#  STAT $? "My SQL PW reset is not required"
 fi
 
 PRINT "Extract component to tmp"
