@@ -27,12 +27,13 @@ IPADDRESS=$(aws ec2 describe-instances --filters Name=tag:Name,Values=${COMPONEN
 sed -e "s/COMPONENT/${COMPONENT}/" -e "s/IPADDRESS/${IPADDRESS}/" record.json >/tmp/record.json
 aws route53 change-resource-record-sets --hosted-zone-id Z0119149I8S0IAPXEMO8 --change-batch file:///tmp/record.json
 
+echo "${IPADDRESS} APP=${COMPONENT}" >>inventory
+
 }
 
 if [ "$1" == "all" ]; then
   for instance in frontend mongodb catalogue redis user cart mysql shipping rabbitmq payment ; do
     Instance_Create $instance
-
   done
 else
   Instance_Create $1
